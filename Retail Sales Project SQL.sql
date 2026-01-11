@@ -1,6 +1,7 @@
--- SQL Retail Sales Analysis - p1 --
+-- SQL Retail Sales Analysis  --
 
--- create Table
+-- create Table--
+
 DROP TABLE IF EXISTS  Retail_Sales;
 create Table Retail_Sales (
 transactions_id int primary key,
@@ -48,19 +49,21 @@ where transactions_id is null
     or cogs is null
     or total_sales is null;
     
-    -- Data exploration
+    -- Data exploration--
+
 -- How many sales we have??--
 
 select count(*) as total_sales from retail_sales;
 
 -- how many unique customer we have?? --
+
 select count(distinct customer_id) as  Total_Customers from retail_sales;
 
 -- how many unique category we have?? --
  
  select distinct category from retail_sales;
  
- -- Data Analysis & Findings --
+  -- Data Analysis & Findings --
  
  -- 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05** --
  -- 2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022** --
